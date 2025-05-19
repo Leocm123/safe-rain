@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAFERAIN - Sistema de Alerta de Enchentes</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <i class="fas fa-cloud-rain"></i>
+          <h1>SAFERAIN</h1>
+        </div>
+        <p class="subtitle">Sistema de Alerta de Enchentes</p>
+        <div class="rain-animation" id="rainAnimation"></div>
+      </header>
+
+      <div class="search-section">
+        <div class="search-box">
+          <input
+            type="text"
+            id="cityInput"
+            placeholder="Digite o nome da cidade..."
+            aria-label="Nome da cidade"
+          />
+          <button id="searchBtn">
+            <i class="fas fa-search"></i> Buscar Dados Meteorológicos
+          </button>
+        </div>
+        <div style="margin-top: 15px; text-align: center">
+          <button
+            id="helpBtn"
+            style="
+              background: none;
+              border: none;
+              color: var(--primary-color);
+              cursor: pointer;
+              text-decoration: underline;
+            "
+          >
+            <i class="fas fa-question-circle"></i> Problemas na busca?
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="helpDialog"
+        style="
+          display: none;
+          padding: 15px;
+          margin: 15px;
+          background-color: #e9ecef;
+          border-radius: 8px;
+        "
+      >
+        <h3>
+          <i class="fas fa-info-circle"></i> Soluções para problemas comuns
+        </h3>
+        <ul style="margin-top: 10px; padding-left: 20px">
+          <li>
+            <strong>Cidade não encontrada:</strong> Tente adicionar o código do
+            país (ex: "São Paulo,BR").
+          </li>
+          <li>
+            <strong>Erro de CORS:</strong> Se estiver testando localmente, pode
+            haver restrições. Tente usar um servidor local.
+          </li>
+          <li>
+            <strong>Erro 429:</strong> Você excedeu o limite de requisições do
+            plano gratuito.
+          </li>
+        </ul>
+        <button
+          id="closeHelpBtn"
+          style="
+            margin-top: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+          "
+        >
+          Fechar ajuda
+        </button>
+      </div>
+
+      <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <p>Buscando dados meteorológicos...</p>
+      </div>
+
+      <div class="error-message" id="errorMessage">
+        <i class="fas fa-exclamation-circle"></i>
+        <span id="errorText"
+          >Cidade não encontrada. Verifique o nome e tente novamente.</span
+        >
+      </div>
+
+      <div class="result-section" id="resultSection">
+        <h2>Informações Meteorológicas: <span id="cityName">Cidade</span></h2>
+
+        <div class="weather-data">
+          <div class="weather-card">
+            <h3><i class="fas fa-cloud"></i> Condição Atual</h3>
+            <p id="weatherCondition">Nublado</p>
+          </div>
+
+          <div class="weather-card">
+            <h3><i class="fas fa-temperature-high"></i> Temperatura</h3>
+            <p id="temperature">25°C</p>
+          </div>
+
+          <div class="weather-card">
+            <h3><i class="fas fa-tint"></i> Umidade</h3>
+            <p id="humidity">80%</p>
+          </div>
+        </div>
+
+        <div class="weather-data">
+          <div class="weather-card">
+            <h3><i class="fas fa-cloud-rain"></i> Chuva (últimas 3h)</h3>
+            <p id="rainAmount">0 mm</p>
+          </div>
+
+          <div class="weather-card">
+            <h3><i class="fas fa-exclamation-triangle"></i> Nível de Risco</h3>
+            <p id="riskLevel">Baixo</p>
+          </div>
+        </div>
+
+        <div class="alert-box" id="alertBox">
+          <h3>
+            <i class="fas fa-bell"></i>
+            <span id="alertTitle">Alerta de Chuva</span>
+          </h3>
+          <p id="alertMessage">Mensagem de alerta sobre o nível de chuva.</p>
+
+          <div class="alert-actions">
+            <button class="whatsapp-btn" id="whatsappBtn">
+              <i class="fab fa-whatsapp"></i> Compartilhar alerta
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>
+          SAFERAIN &copy; 2025 - Sistema de Monitoramento e Alerta de Enchentes
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
