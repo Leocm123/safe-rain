@@ -28,10 +28,15 @@ Foi desenvolvido como parte de um projeto acadêmico para simular um sistema de 
 ### 📁 Estrutura do Projeto
 
 saferain_project/
+
 ├── client/ ← Código do site (HTML/CSS/JS)
+
 ├── server/ ← Backend Node.js para proteger a API key
+
 ├── .gitignore
+
 ├── package.json
+
 
 yaml
 
