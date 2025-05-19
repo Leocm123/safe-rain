@@ -45,21 +45,23 @@ saferain_project/
 1. Acesse a pasta do projeto no terminal:
 
 `bash
+
 cd saferain_project
 
 2. Instale as dependências do servidor:
 
 `bash
+
 npm install
 
 3. Crie um arquivo .env dentro da pasta server/ com o seguinte conteúdo:
 
-ini
 OPENWEATHER_API_KEY=SUA_CHAVE_DA_API_AQUI
 
 4. Inicie o servidor backend:
 
 `bash
+
 node server/server.js
 
 O servidor ficará disponível em: http://localhost:3000
