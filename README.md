@@ -38,8 +38,6 @@ saferain_project/
 ├── package.json
 
 
-yaml
-
 ---
 
 ### 1. Backend (API Proxy)
