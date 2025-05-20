@@ -1,17 +1,42 @@
 # 🌧️ SAFERAIN - Sistema de Alerta de Enchentes
 
-O SAFERAIN é um sistema web que permite consultar **informações meteorológicas** e detectar **níveis de risco de enchentes** com base nos dados da API da OpenWeatherMap.
-
-Foi desenvolvido como parte de um projeto acadêmico para simular um sistema de alerta que informa **condições climáticas, volume de chuvas recentes e níveis de risco**, com **alertas visuais e integração com o WhatsApp** para compartilhamento.
+Projeto acadêmico desenvolvido como parte do Desafio Profissional da Universidade Cesumar (UNICESUMAR), com foco na aplicação prática de tecnologias web para resolver problemas sociais reais — neste caso, alertas de enchentes e chuvas intensas.
 
 ---
 
-## 📦 Tecnologias Utilizadas
+## 📌 Resumo
 
-- HTML5, CSS3 e JavaScript
-- Node.js + Express (backend)
-- API da [OpenWeatherMap](https://openweathermap.org/)
-- Git + GitHub
+O SAFERAIN é um sistema web interativo que permite consultar **dados meteorológicos em tempo real**, com foco na **prevenção de enchentes** e **disseminação de alertas climáticos**. Ele oferece uma interface simples e informativa, ideal para usuários finais e gestores públicos locais. Também serve como ferramenta didática para estudar o consumo de APIs e o desenvolvimento full stack com boas práticas de segurança.
+
+---
+
+## 🎯 Objetivo
+
+Desenvolver uma aplicação capaz de alertar sobre riscos climáticos, **informando a população sobre chuvas intensas**, seu volume recente e os **níveis de risco de enchente** associados. O sistema também permite o **compartilhamento imediato de alertas via WhatsApp**, promovendo a comunicação entre comunidades e facilitando decisões preventivas em tempo hábil.
+
+---
+
+## 🧩 Funcionalidades
+
+- 🔎 Busca por cidade (ex: `São Paulo`, `Curitiba,BR`)
+- ☁️ Condição climática e temperatura atual
+- 💧 Volume de chuva das últimas 3 horas
+- 📊 Cálculo automático do nível de risco: `Sem risco`, `Baixo`, `Médio`, `Alto`
+- 📢 Exibição de alertas com cores e textos personalizados
+- 🌧️ Animação de chuva com intensidade dinâmica
+- 📱 Compartilhamento do alerta via WhatsApp
+- 🧪 **Modo de teste** para simular emergências
+
+---
+
+## ⚙️ Tecnologias Utilizadas
+
+- Frontend: `HTML5`, `CSS3`, `JavaScript`
+- Backend: `Node.js`, `Express`, `Axios`
+- API: [OpenWeatherMap](https://openweathermap.org/)
+- Hospedagem de código: `GitHub`
+- Controle de variáveis sensíveis: `.env`
+
 
 ---
 
